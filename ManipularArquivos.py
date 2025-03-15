@@ -1,9 +1,9 @@
-arquivo= "MeuArquivo"
+arquivo= "MeuArquivo.txt"
 
 try: 
-    open("MeuArquivo", "r")
+    open("MeuArquivo.txt", "r")
 except FileNotFoundError: 
-    open("MeuArquivo", "w")
+    open("MeuArquivo.txt", "w")
 
 # with open(arquivo, "w") as arq:
 #     arq.write("primeira linha")

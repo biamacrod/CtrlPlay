@@ -11,11 +11,12 @@ def adicionarItem():
 def vizualizarLista():
     try:
         with open(arquivo, "r") as arq:
-            if not item:
+            itens = arq.readlines()
+            if not itens:
                 print("Lista está vazia!")
             else: 
                 print("Sua lista de compras: ")
-                for i, item in enumerate(item, start =1):
+                for i, item in enumerate(itens, start =1):
                     #i = indicar uma contagem
                     print(i, item.strip())
     except FileNotFoundError:
@@ -46,11 +47,11 @@ while True:
     opcao = int(input("digite uma opção: "))
 # == é comparação
     if opcao == 1:
-        adicionarItem
+        adicionarItem()
     elif opcao == 2:
-        vizualizarLista
+        vizualizarLista()
     elif opcao == 3:
-        removerItem
+        removerItem()
     elif opcao == 4:
         print("Saindooooooo... ")
         break
